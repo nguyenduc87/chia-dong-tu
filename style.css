@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.container {
+    padding: 12px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.table-wrapper {
+    max-height: 70vh;
+    /* chiều cao vùng cuộn */
+    /* overflow: auto;          cho phép cuộn */
+}
+
+/* fix dòng đầu */
+thead th {
+    position: sticky;
+    top: 0;
+    background: #ffeb3b;
+    /* bắt buộc có nền */
+    z-index: 10;
+    border-bottom: 2px solid #999;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+
+    transition: width 0.3s ease, min-width 0.3s ease;
+    white-space: nowrap;
+}
+
+th {
+    background: #ffeb3b;
+}
+
+/* chiều rộng mặc định cho cột có nút */
+td {
+    max-width: 80px;
+    transition: max-width 0.35s ease, padding 0.35s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* khi đã mở */
+td.expanded {
+    max-width: 160px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* hiệu ứng text hiện ra */
+.answer-text {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    animation: reveal 0.3s ease forwards;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.kanji {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.answer-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #5b9bd5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.answer-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
