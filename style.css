@@ -45,7 +45,7 @@ td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
 
     transition: width 0.3s ease, min-width 0.3s ease;
     white-space: nowrap;
@@ -73,8 +73,8 @@ td.expanded {
 /* hiệu ứng text hiện ra */
 .answer-text {
     display: inline-block;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 19px;
+    /* font-weight: bold; */
     color: #333;
     animation: reveal 0.3s ease forwards;
 }
@@ -115,22 +115,10 @@ td.expanded {
 }
 
 .kanji-text {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
+  /* font-weight: bold; */
   animation: reveal 0.3s ease forwards;
 }
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 
 .answer-btn {
     width: 100%;
@@ -143,8 +131,3 @@ td.expanded {
     cursor: pointer;
 }
 
-.answer-text {
-    font-size: 15px;
-    font-weight: bold;
-    color: #333;
-}
